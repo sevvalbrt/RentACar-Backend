@@ -16,3 +16,6 @@ C:\Users\barut\Desktop\ReCapProject\Entities\obj\Debug\netstandard2.0\Entities.A
 C:\Users\barut\Desktop\ReCapProject\Entities\obj\Debug\netstandard2.0\Entities.AssemblyInfo.cs
 C:\Users\barut\Desktop\ReCapProject\Entities\obj\Debug\netstandard2.0\Entities.dll
 C:\Users\barut\Desktop\ReCapProject\Entities\obj\Debug\netstandard2.0\Entities.pdb
+C:\Users\barut\Desktop\ReCapProject\Entities\bin\Debug\netstandard2.0\Core.dll
+C:\Users\barut\Desktop\ReCapProject\Entities\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\barut\Desktop\ReCapProject\Entities\obj\Debug\netstandard2.0\Entities.csproj.CopyComplete

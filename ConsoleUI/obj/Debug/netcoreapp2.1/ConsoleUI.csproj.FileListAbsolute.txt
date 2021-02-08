@@ -34,3 +34,5 @@ C:\Users\barut\Desktop\ReCapProject\ConsoleUI\obj\Debug\netcoreapp2.1\ConsoleUI.
 C:\Users\barut\Desktop\ReCapProject\ConsoleUI\obj\Debug\netcoreapp2.1\ConsoleUI.csproj.CopyComplete
 C:\Users\barut\Desktop\ReCapProject\ConsoleUI\obj\Debug\netcoreapp2.1\ConsoleUI.dll
 C:\Users\barut\Desktop\ReCapProject\ConsoleUI\obj\Debug\netcoreapp2.1\ConsoleUI.pdb
+C:\Users\barut\Desktop\ReCapProject\ConsoleUI\bin\Debug\netcoreapp2.1\Core.dll
+C:\Users\barut\Desktop\ReCapProject\ConsoleUI\bin\Debug\netcoreapp2.1\Core.pdb
