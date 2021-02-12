@@ -10,85 +10,102 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+
+            CarTest();
+            ColorTest();
+            BrandTest();
+            Console.ReadLine();
+
+        }
+
+        private static void CarTest()
+        {
             Car car = new Car();
-            car.Id = 4;
+            car.Id = 3;
             car.BrandId = 1;
             car.ColorId = 2;
             car.ModelYear = 1975;
             car.DailyPrice = 1500;
-            car.Description = "Car 4";
+            car.Description = "Car 3";
 
             Car car1 = new Car();
-            car1.Id = 5;
+            car1.Id = 4;
             car1.BrandId = 2;
             car1.ColorId = 1;
             car1.ModelYear = 1960;
             car1.DailyPrice = 900;
-            car1.Description = "Car 5";
-
-            Color color = new Color();
-            color.Id = 3;
-            color.ColorName = "Blue";
-
-            Brand brand = new Brand();
-            brand.Id = 3;
-            brand.BrandName = "Ford";
-
+            car1.Description = "Car 4";
 
             CarManager carManager = new CarManager(new EfCarDal());
 
             carManager.Add(car);
             carManager.Add(car1);
 
-            car.DailyPrice = 1200;
-            carManager.Update(car);
+            Console.WriteLine("Details Of Cars");
+            var result = carManager.GetCarDetails();
+            if (result.Success == true)
+            {
+                foreach (var cars in result.Data)
+                {
+                    Console.WriteLine(cars.Description + "/" + cars.BrandName + "/" + cars.ColorName + "/" + cars.DailyPrice);
 
+                }
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+        }
 
-            BrandManager brandManager = new BrandManager(new EfBrandDal());
-
-            brandManager.Add(brand);
-            
+        private static void ColorTest()
+        {
+            Color color = new Color();
+            color.Id = 3;
+            color.ColorName = "Blue";
 
             ColorManager colorManager = new ColorManager(new EfColorDal());
 
             colorManager.Add(color);
 
-            Console.WriteLine("All Cars");
-            foreach (var cars in carManager.GetAll())
+            Console.WriteLine("All Colors");
+            var result = colorManager.GetAll();
+            if (result.Success == true)
             {
-                Console.WriteLine(cars.Description);
-
+                foreach (var colors in result.Data)
+                {
+                    Console.WriteLine(colors.ColorName);
+                }
             }
-
-            Console.WriteLine("\nCar By Id");
-            foreach (var cars in carManager.GetById(1))
+            else
             {
-                Console.WriteLine(cars.Description);
+                Console.WriteLine(result.Message);
             }
-
-            Console.WriteLine("\nDetails Of Cars");
-            foreach (var cars in carManager.GetCarDetails())
-            {
-                Console.WriteLine(cars.Description + "/" + cars.BrandName + "/" + cars.ColorName + "/" + cars.DailyPrice);
-
-            }
-
-            brandManager.Delete(brand);
-
-            Console.WriteLine("\nAll Brands");
-            foreach (var brands in brandManager.GetAll())
-            {
-                Console.WriteLine(brands.BrandName);
-            }
-
-            Console.WriteLine("\nAll Colors");
-            foreach (var colors in colorManager.GetAll())
-            {
-                Console.WriteLine(colors.ColorName);
-
-            }
-
-            Console.ReadLine();
         }
+
+        private static void BrandTest()
+        {
+            Brand brand = new Brand();
+            brand.Id = 3;
+            brand.BrandName = "Ford";
+
+            BrandManager brandManager = new BrandManager(new EfBrandDal());
+
+            brandManager.Add(brand);
+
+            Console.WriteLine("All Brands");
+            var result = brandManager.GetAll();
+            if (result.Success == true)
+            {
+                foreach (var brands in result.Data)
+                {
+                    Console.WriteLine(brands.BrandName);
+                }
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+        }
+
     }
 }
