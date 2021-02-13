@@ -6,19 +6,25 @@ namespace Business.Constants
 {
     public class Messages
     {
-        public static string ProductAdded = "Ürün eklendi";
-        public static string ProductNameInvalid = "Ürün ismi geçersiz";
-        public static string MaintenanceTime = "Sistem bakımda";
-        public static string ProductsListed = "Ürünler listelendi";
-        public static string ProductDeleted = "Ürün silindi";
-        public static string ProductUpdated = "Ürün güncellendi";
-        public static string BrandAdded = "Marka eklendi";
-        public static string ColorAdded = "Renk eklendi";
-        public static string BrandDeleted = "Marka silindi";
-        public static string ColorDeleted = "Renk silindi";
-        public static string BrandUpdated = "Marka güncellendi";
-        public static string ColorUpdated = "Renk güncellendi";
-        public static string BrandListed = "Markalar listelendi";
-        public static string ColorListed = "Renkler listelendi";
+        public static string ProductAdded = "Product added";
+        public static string ProductNameInvalid = "Invalid Product";
+        public static string MaintenanceTime = "Maintenance time";
+        public static string ProductsListed = "Products listed";
+        public static string ProductDeleted = "Product deleted";
+        public static string ProductUpdated = "Product updated";
+        public static string BrandAdded = "Brand added";
+        public static string ColorAdded = "Color added";
+        public static string BrandDeleted = "Brand deleted";
+        public static string ColorDeleted = "Color deleted";
+        public static string BrandUpdated = "Brand updated";
+        public static string ColorUpdated = "Color updated";
+        public static string BrandListed = "Brands listed";
+        public static string ColorListed = "Colors listed";
+        public static string UserAdded = "User added";
+        public static string CustomerAdded = "Customer added";
+        public static string CustomerDeleted = "Customer deleted";
+        public static string CustomerUpdated = "Customer updated";
+        public static string CarRented = "Car rented";
+        public static string NotCarRented = "Not car rented";
     }
 }

@@ -12,8 +12,9 @@ namespace ConsoleUI
         {
 
             CarTest();
-            ColorTest();
-            BrandTest();
+            //ColorTest();
+            //BrandTest();
+            //RentalTest();
             Console.ReadLine();
 
         }
@@ -38,23 +39,20 @@ namespace ConsoleUI
 
             CarManager carManager = new CarManager(new EfCarDal());
 
-            carManager.Add(car);
-            carManager.Add(car1);
+            //carManager.Add(car);
+            //carManager.Add(car1);
+            var result = carManager.GetCarDetails();
 
             Console.WriteLine("Details Of Cars");
-            var result = carManager.GetCarDetails();
-            if (result.Success == true)
-            {
-                foreach (var cars in result.Data)
-                {
-                    Console.WriteLine(cars.Description + "/" + cars.BrandName + "/" + cars.ColorName + "/" + cars.DailyPrice);
+            Console.WriteLine("Description\t" + "Brand\t" + "Color\t" + "Daily Price\t" + "Company Name\t" + "Rent Date\t\t" + "Return Date");
 
-                }
-            }
-            else
+            foreach (var cars in result.Data)
             {
-                Console.WriteLine(result.Message);
+                Console.WriteLine(cars.Description + "\t\t" + cars.BrandName + "\t" + cars.ColorName + "\t" + cars.DailyPrice
+                    + "\t\t" + cars.CompanyName + "\t" + cars.RentDate + "\t" + cars.ReturnDate);
+
             }
+
         }
 
         private static void ColorTest()
@@ -65,9 +63,9 @@ namespace ConsoleUI
 
             ColorManager colorManager = new ColorManager(new EfColorDal());
 
-            colorManager.Add(color);
+            //colorManager.Add(color);
 
-            Console.WriteLine("All Colors");
+            Console.WriteLine("\nAll Colors");
             var result = colorManager.GetAll();
             if (result.Success == true)
             {
@@ -90,9 +88,9 @@ namespace ConsoleUI
 
             BrandManager brandManager = new BrandManager(new EfBrandDal());
 
-            brandManager.Add(brand);
+            //brandManager.Add(brand);
 
-            Console.WriteLine("All Brands");
+            Console.WriteLine("\nAll Brands");
             var result = brandManager.GetAll();
             if (result.Success == true)
             {
@@ -106,6 +104,18 @@ namespace ConsoleUI
                 Console.WriteLine(result.Message);
             }
         }
-
+        private static void RentalTest()
+        {
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            var result = rentalManager.Add(new Rental
+            {
+                Id=4,
+                CarId = 3,
+                CustomerId = 1,
+                RentDate = new DateTime(2021, 2, 13),
+                ReturnDate = new DateTime(2021, 3, 15)
+            });
+            Console.WriteLine(result.Message);
+        }
     }
 }
