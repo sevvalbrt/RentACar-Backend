@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PDkJuH5doXdQz5zHXxvOlmgfQopXy+kFIL4Z7Ug+PcQIGvn4JH/SXoXVBo5FlcbKcv2TgihVVNm1dCX8WP4hpw==",
+  "dgSpecHash": "54R6zzoCxiuoUpG5Pnhcwtau9nj6avYiIkqpRlXufWWoOcSGxrLnu2XFYVSmZJ6RfZ//jZ0SfFtm6YrPKeKG1Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\barut\\Desktop\\ReCapProject\\Core\\Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\barut\\.nuget\\packages\\fluentvalidation\\9.5.1\\fluentvalidation.9.5.1.nupkg.sha512",
     "C:\\Users\\barut\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\barut\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

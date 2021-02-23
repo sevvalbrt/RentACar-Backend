@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "zpPMJ/9Z6cm20QcIT9/Iym41EjeBY0RNuJB0Ychk2RAqQGjs7HzBJqoPuMWsBNFHedRlK+W0eUX/6ViY4eFrAA==",
+  "dgSpecHash": "7F1Ew3yqsokT6Z0l2G/qKz2r/DQrlImbsBKppnWEWgzYJ7rCn3SHWTfEJqQ71KhX0E0SZMYFqDfCHcf4rY1z3Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\barut\\Desktop\\ReCapProject\\ConsoleUI\\ConsoleUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\barut\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
     "C:\\Users\\barut\\.nuget\\packages\\autofac.extras.dynamicproxy\\6.0.0\\autofac.extras.dynamicproxy.6.0.0.nupkg.sha512",
     "C:\\Users\\barut\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\barut\\.nuget\\packages\\fluentvalidation\\9.5.1\\fluentvalidation.9.5.1.nupkg.sha512",
     "C:\\Users\\barut\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\barut\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
