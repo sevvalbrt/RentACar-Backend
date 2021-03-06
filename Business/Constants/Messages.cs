@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Business.Constants
@@ -26,5 +27,6 @@ namespace Business.Constants
         public static string CustomerUpdated = "Customer updated";
         public static string CarRented = "Car rented";
         public static string NotCarRented = "Not car rented";
+        public static string AuthorizationDenied="Yetkiniz yok";
     }
 }
