@@ -44,6 +44,8 @@ namespace WebAPI
             //services.AddSingleton<ICustomerDal, EfCustomerDal>();
             //services.AddSingleton<IRentalService, RentalManager>();
             //services.AddSingleton<IRentalDal, EfRentalDal>();
+            //services.AddSingleton<ICarImageService, CarImageManager>();
+            //services.AddSingleton<ICarImageDal, EfCarImageDal>();
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
