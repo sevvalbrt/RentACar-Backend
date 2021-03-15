@@ -1,10 +1,9 @@
 ﻿using Business.Abstract;
-using Entities.Concrete;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
@@ -20,10 +19,12 @@ namespace WebAPI.Controllers
             _rentalService = rentalService;
         }
 
-        [HttpPost("add")]
-        public IActionResult Add(Rental rental)
+        [HttpGet("getrentaldetails")]
+        public IActionResult GetRentalDetails()
         {
-            var result = _rentalService.Add(rental);
+            Thread.Sleep(5000);
+
+            var result = _rentalService.GetRentalDetails();
             if (result.Success)
             {
                 return Ok(result);

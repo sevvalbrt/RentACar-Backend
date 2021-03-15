@@ -6,6 +6,12 @@ C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.runtim
 C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.runtimeconfig.dev.json
 C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.dll
 C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\WebAPI.pdb
+C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
+C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -66,9 +72,3 @@ C:\Users\barut\Desktop\ReCapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.csproj
 C:\Users\barut\Desktop\ReCapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.dll
 C:\Users\barut\Desktop\ReCapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.pdb
 C:\Users\barut\Desktop\ReCapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.genruntimeconfig.cache
-C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.dll
-C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
-C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
-C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
-C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
-C:\Users\barut\Desktop\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

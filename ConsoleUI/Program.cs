@@ -48,8 +48,7 @@ namespace ConsoleUI
 
             foreach (var cars in result.Data)
             {
-                Console.WriteLine(cars.Description + "\t\t" + cars.BrandName + "\t" + cars.ColorName + "\t" + cars.DailyPrice
-                    + "\t\t" + cars.CompanyName + "\t" + cars.RentDate + "\t" + cars.ReturnDate);
+                Console.WriteLine(cars.Description + "\t\t" + cars.BrandName + "\t" + cars.ColorName + "\t" + cars.DailyPrice);
 
             }
 
