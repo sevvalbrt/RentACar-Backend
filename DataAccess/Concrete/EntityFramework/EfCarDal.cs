@@ -32,5 +32,49 @@ namespace DataAccess.Concrete.EntityFramework
                 return result.ToList();
             }
         }
+
+        public List<CarDetailDto> GetCarByBrand(int brandId)
+        {
+            using (ReCapDemoContext context = new ReCapDemoContext())
+            {
+                var result = from car in context.Car
+                             join brand in context.Brand on car.BrandId equals brand.Id
+                             join color in context.Color on car.ColorId equals color.Id
+
+                             select new CarDetailDto
+                             {
+                                 BrandId=brand.Id,
+                                 Description = car.Description,
+                                 BrandName = brand.BrandName,
+                                 ColorName = color.ColorName,
+                                 ModelYear=car.ModelYear,
+                                 DailyPrice = car.DailyPrice
+                             };
+
+                return result.Where(c => c.BrandId == brandId).ToList();
+            }
+        }
+
+        public List<CarDetailDto> GetCarByColor(int colorId)
+        {
+            using (ReCapDemoContext context = new ReCapDemoContext())
+            {
+                var result = from car in context.Car
+                             join brand in context.Brand on car.BrandId equals brand.Id
+                             join color in context.Color on car.ColorId equals color.Id
+
+                             select new CarDetailDto
+                             {
+                                 ColorId = color.Id,
+                                 Description = car.Description,
+                                 BrandName = brand.BrandName,
+                                 ColorName = color.ColorName,
+                                 ModelYear = car.ModelYear,
+                                 DailyPrice = car.DailyPrice
+                             };
+
+                return result.Where(c => c.ColorId == colorId).ToList();
+            }
+        }
     }
 }
