@@ -3,6 +3,7 @@ using Entities.Concrete;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace Business.Abstract
@@ -25,12 +26,16 @@ namespace Business.Abstract
 
         IDataResult<List<Car>> GetByUnitPrice(decimal min, decimal max);
 
-        IDataResult<List<CarDetailDto>> GetCarDetails();
 
         IDataResult<List<CarDetailDto>> GetCarByBrand(int brandId);
 
         IDataResult<List<CarDetailDto>> GetCarByColor(int colorId);
 
         IResult AddTransactionalTest(Car car);
+        IDataResult<List<CarDetailDto>> GetCarDetails(Expression<Func<Car,bool>> filter=null);
+
+        IDataResult<List<CarDetailDto>> GetCarDetail(int carId);
+
+
     }
 }
