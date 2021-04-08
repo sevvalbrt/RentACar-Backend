@@ -33,5 +33,13 @@ namespace Business.Constants
         public static string ImageUpdated="Image updated";
         public static string ImagesListed="Images listed";
         public static string CarImageCountOfError= "Up to 5 images can be add";
+
+        public static string RentalCar = "added";
+
+        public static string RentalDeleted = "deleted";
+
+        public static string RentalsListed = "listed";
+
+        public static string RentalUpdated = "updated";
     }
 }

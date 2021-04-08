@@ -20,16 +20,12 @@ namespace Business.Abstract
 
         IDataResult<Car> GetById(int carId);
 
-        IDataResult<List<Car>> GetBrandId(int brandId);
-
-        IDataResult<List<Car>> GetColorId(int ColorId);
-
         IDataResult<List<Car>> GetByUnitPrice(decimal min, decimal max);
 
 
-        IDataResult<List<CarDetailDto>> GetCarByBrand(int brandId);
+        IDataResult<List<CarDetailDto>> GetCarsByBrandId(int brandId);
 
-        IDataResult<List<CarDetailDto>> GetCarByColor(int colorId);
+        IDataResult<List<CarDetailDto>> GetCarsByColorId(int colorId);
 
         IResult AddTransactionalTest(Car car);
         IDataResult<List<CarDetailDto>> GetCarDetails(Expression<Func<Car,bool>> filter=null);

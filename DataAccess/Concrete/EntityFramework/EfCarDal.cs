@@ -38,12 +38,14 @@ namespace DataAccess.Concrete.EntityFramework
             using (ReCapDemoContext context = new ReCapDemoContext())
             {
                 var result = from c in filter is null ? context.Car : context.Car.Where(filter)
-                             join b in context.Brand on c.BrandId equals b.Id
-                             join cl in context.Color on c.ColorId equals cl.Id
+                             join b in context.Brand on c.BrandId equals b.BrandId
+                             join cl in context.Color on c.ColorId equals cl.ColorId
 
                              select new CarDetailDto
                              {
                                  CarId = c.Id,
+                                 ColorId=cl.ColorId,
+                                 BrandId=b.BrandId,
                                  Description = c.Description,
                                  ColorName = cl.ColorName,
                                  BrandName = b.BrandName,
@@ -55,44 +57,46 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public List<CarDetailDto> GetCarByBrand(int brandId)
+        public List<CarDetailDto> GetCarsByBrandId(int brandId)
         {
             using (ReCapDemoContext context = new ReCapDemoContext())
             {
                 var result = from car in context.Car
-                             join brand in context.Brand on car.BrandId equals brand.Id
-                             join color in context.Color on car.ColorId equals color.Id
+                             join brand in context.Brand on car.BrandId equals brand.BrandId
+                             join color in context.Color on car.ColorId equals color.ColorId
 
                              select new CarDetailDto
                              {
-                                 BrandId=brand.Id,
+                                 BrandId=brand.BrandId,
                                  Description = car.Description,
                                  BrandName = brand.BrandName,
                                  ColorName = color.ColorName,
                                  ModelYear=car.ModelYear,
-                                 DailyPrice = car.DailyPrice
+                                 DailyPrice = car.DailyPrice,
+                                 ImagePath = context.CarImage.Where(x => x.CarId == car.Id).FirstOrDefault().ImagePath
                              };
 
                 return result.Where(c => c.BrandId == brandId).ToList();
             }
         }
 
-        public List<CarDetailDto> GetCarByColor(int colorId)
+        public List<CarDetailDto> GetCarsByColorId(int colorId)
         {
             using (ReCapDemoContext context = new ReCapDemoContext())
             {
                 var result = from car in context.Car
-                             join brand in context.Brand on car.BrandId equals brand.Id
-                             join color in context.Color on car.ColorId equals color.Id
+                             join brand in context.Brand on car.BrandId equals brand.BrandId
+                             join color in context.Color on car.ColorId equals color.ColorId
 
                              select new CarDetailDto
                              {
-                                 ColorId = color.Id,
+                                 ColorId = color.ColorId,
                                  Description = car.Description,
                                  BrandName = brand.BrandName,
                                  ColorName = color.ColorName,
                                  ModelYear = car.ModelYear,
-                                 DailyPrice = car.DailyPrice
+                                 DailyPrice = car.DailyPrice,
+                                 ImagePath = context.CarImage.Where(x => x.CarId == car.Id).FirstOrDefault().ImagePath
                              };
 
                 return result.Where(c => c.ColorId == colorId).ToList();

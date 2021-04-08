@@ -57,7 +57,7 @@ namespace ConsoleUI
         private static void ColorTest()
         {
             Color color = new Color();
-            color.Id = 3;
+            color.ColorId = 3;
             color.ColorName = "Blue";
 
             ColorManager colorManager = new ColorManager(new EfColorDal());
@@ -82,7 +82,7 @@ namespace ConsoleUI
         private static void BrandTest()
         {
             Brand brand = new Brand();
-            brand.Id = 3;
+            brand.BrandId = 3;
             brand.BrandName = "Ford";
 
             BrandManager brandManager = new BrandManager(new EfBrandDal());

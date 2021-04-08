@@ -55,7 +55,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult Add([FromForm(Name = ("Image"))] IFormFile file, [FromForm] CarImage carImage)
+        public IActionResult Add([FromForm(Name = ("Images"))] IFormFile file, [FromForm] CarImage carImage)
         {
             var result = _carImageService.Add(file, carImage);
 
@@ -83,7 +83,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("update")]
-        public IActionResult Update([FromForm(Name = ("Image"))] IFormFile file, [FromForm(Name = ("Id"))] int Id)
+        public IActionResult Update([FromForm(Name = ("Images"))] IFormFile file, [FromForm(Name = ("Id"))] int Id)
         {
             var carImage = _carImageService.GetById(Id).Data;
             var result = _carImageService.Update(file, carImage);
