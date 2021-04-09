@@ -43,15 +43,15 @@ namespace Business.Concrete
             var userToCheck = _userService.GetByMail(userForLoginDto.Email);
             if (userToCheck == null)
             {
-                return new ErrorDataResult<User>("Kullanıcı bulunamadı");
+                return new ErrorDataResult<User>("kullanıcı bulunamadı");
             }
 
             if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToCheck.PasswordHash, userToCheck.PasswordSalt))
             {
-                return new ErrorDataResult<User>("Parola hatası");
+                return new ErrorDataResult<User>("şifre hatalı");
             }
 
-            return new SuccessDataResult<User>(userToCheck, "Başarılı giriş");
+            return new SuccessDataResult<User>(userToCheck, "giriş başarılı");
         }
 
         public IResult UserExists(string email)

@@ -38,6 +38,15 @@ namespace Business.Concrete
 
         }
 
+        [ValidationAspect(typeof(CarValidator))]
+        [CacheRemoveAspect("ICarService.Get")]
+        public IResult Update(Car car)
+        {
+            _carDal.Update(car);
+            return new SuccessResult(Messages.CarUpdated);
+
+        }
+
         public IResult Delete(Car car)
         {
             _carDal.Delete(car);
@@ -65,25 +74,14 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
         }
-
-        [ValidationAspect(typeof(CarValidator))]
-        [CacheRemoveAspect("ICarService.Get")]
-        public IResult Update(Car car)
-        {
-            return new SuccessResult(Messages.CarUpdated);
-        }
+        
 
         [TransactionScopeAspect]
         public IResult AddTransactionalTest(Car car)
         {
-            Add(car);
-            if (car.DailyPrice < 150)
-            {
-                throw new Exception("");
-            }
-            Add(car);
-
-            return null;
+            _carDal.Update(car);
+            _carDal.Add(car);
+            return new SuccessResult(Messages.CarUpdated);
         }
 
         public IDataResult<List<CarDetailDto>> GetCarsByBrandId(int brandId)
