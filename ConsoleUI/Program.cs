@@ -22,7 +22,7 @@ namespace ConsoleUI
         private static void CarTest()
         {
             Car car = new Car();
-            car.Id = 3;
+            car.CarId = 3;
             car.BrandId = 1;
             car.ColorId = 2;
             car.ModelYear = 1975;
@@ -30,7 +30,7 @@ namespace ConsoleUI
             car.Description = "Car 3";
 
             Car car1 = new Car();
-            car1.Id = 4;
+            car1.CarId = 4;
             car1.BrandId = 2;
             car1.ColorId = 1;
             car1.ModelYear = 1960;

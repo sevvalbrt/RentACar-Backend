@@ -62,7 +62,7 @@ namespace Business.Concrete
         [CacheAspect]
         public IDataResult<Car> GetById(int carId)
         {
-            return new SuccessDataResult<Car>(_carDal.Get(c => c.Id == carId));
+            return new SuccessDataResult<Car>(_carDal.Get(c => c.CarId == carId));
         }
 
         public IDataResult<List<Car>> GetByUnitPrice(decimal min, decimal max)
@@ -96,7 +96,7 @@ namespace Business.Concrete
 
         public IDataResult<List<CarDetailDto>> GetCarDetail(int carId)
         {
-            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(c=>c.Id==carId));
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(c=>c.CarId==carId));
         }
     }
 }

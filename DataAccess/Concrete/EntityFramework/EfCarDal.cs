@@ -43,7 +43,7 @@ namespace DataAccess.Concrete.EntityFramework
 
                              select new CarDetailDto
                              {
-                                 CarId = c.Id,
+                                 CarId = c.CarId,
                                  ColorId=cl.ColorId,
                                  BrandId=b.BrandId,
                                  Description = c.Description,
@@ -51,7 +51,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  BrandName = b.BrandName,
                                  DailyPrice = c.DailyPrice,
                                  ModelYear = c.ModelYear,
-                                 ImagePath = context.CarImage.Where(x => x.CarId == c.Id).FirstOrDefault().ImagePath
+                                 ImagePath = context.CarImage.Where(x => x.CarId == c.CarId).FirstOrDefault().ImagePath
                              };
                 return result.ToList();
             }
@@ -73,7 +73,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  ColorName = color.ColorName,
                                  ModelYear=car.ModelYear,
                                  DailyPrice = car.DailyPrice,
-                                 ImagePath = context.CarImage.Where(x => x.CarId == car.Id).FirstOrDefault().ImagePath
+                                 ImagePath = context.CarImage.Where(x => x.CarId == car.CarId).FirstOrDefault().ImagePath
                              };
 
                 return result.Where(c => c.BrandId == brandId).ToList();
@@ -96,7 +96,7 @@ namespace DataAccess.Concrete.EntityFramework
                                  ColorName = color.ColorName,
                                  ModelYear = car.ModelYear,
                                  DailyPrice = car.DailyPrice,
-                                 ImagePath = context.CarImage.Where(x => x.CarId == car.Id).FirstOrDefault().ImagePath
+                                 ImagePath = context.CarImage.Where(x => x.CarId == car.CarId).FirstOrDefault().ImagePath
                              };
 
                 return result.Where(c => c.ColorId == colorId).ToList();
