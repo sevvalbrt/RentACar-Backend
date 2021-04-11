@@ -64,6 +64,11 @@ namespace Business.Concrete
             return new SuccessResult(Messages.RentalUpdated);
         }
 
+        public IDataResult<List<RentalDetailDto>> UserRentedCars(int id)
+        {
+            return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.UserRentedCars(id));
+        }
+
 
     }
 }

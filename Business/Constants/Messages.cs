@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
@@ -41,5 +42,24 @@ namespace Business.Constants
         public static string RentalsListed = "listed";
 
         public static string RentalUpdated = "updated";
+
+        
+
+        public static string CustomerGetAll = "all customers";
+
+        public static string UserGetAll = "all users";
+
+        public static string UserNotFound = "user not found";
+        public static string PasswordError = "password error";
+        public static string SuccessfulLogin = "successfull login";
+
+        public static string UserAlreadyExists = "User Already Exists";
+        public static string AccessTokenCreated = "Access Token Created";
+
+        public static string AddedUser = "add user";
+        public static string DeletedUser = "delete user";
+        public static string UpdatedUser = "update user";
+
+        public static string UserRegistered = "registered";
     }
 }

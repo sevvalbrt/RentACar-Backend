@@ -22,16 +22,45 @@ namespace DataAccess.Concrete.EntityFramework
                              join u in context.User on cu.UserId equals u.Id
                              select new RentalDetailDto
                              {
-                                 Id = r.Id,
-                                 CustomerName = u.FirstName + " " + u.LastName,
+                                 
+                                 FirstName = u.FirstName, 
+                                 LastName= u.LastName,
                                  CarName = c.Description,
-                                 CompanyName = cu.CompanyName,
                                  CarId = c.CarId,
                                  RentDate = r.RentDate,
                                  ReturnDate = r.ReturnDate
                              };
                 return result.ToList();
 
+            }
+        }
+
+        public List<RentalDetailDto> UserRentedCars(int id)
+        {
+            using (ReCapDemoContext context = new ReCapDemoContext())
+            {
+                var result = from rental in context.Rental
+                             join car in context.Car
+                             on rental.CarId equals car.CarId
+                             join customer in context.Customer
+                             on rental.CustomerId equals customer.Id
+                             join user in context.User
+                             on customer.UserId equals user.Id
+                             join brand in context.Brand
+                             on car.BrandId equals brand.BrandId
+                             select new RentalDetailDto
+                             {
+                                 FirstName = user.FirstName,
+                                 LastName = user.LastName,
+                                 CarName = car.Description,
+                                 CarId = car.CarId,
+                                 DailyPrice = car.DailyPrice,
+                                 ReturnDate = rental.ReturnDate,
+                                 RentDate = rental.RentDate,
+                                 BrandName = brand.BrandName,
+                                 UserId = user.Id
+                             };
+                return result.Where(r => r.UserId == id).ToList();
             }
         }
     }

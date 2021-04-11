@@ -17,5 +17,6 @@ namespace Business.Abstract
         IResult Delete(Rental rental);
         IDataResult<List<RentalDetailDto>> GetRentalByCustomerId(int customerId);
         IDataResult<List<RentalDetailDto>> GetRentalDetails(Expression<Func<Rental, bool>> filter = null);
+        IDataResult<List<RentalDetailDto>> UserRentedCars(int id);
     }
 }
